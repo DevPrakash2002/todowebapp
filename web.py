@@ -11,6 +11,9 @@ def add_todo():
 todos = Function.open_todos()
 st.title(' MY TODO APP ')
 
+st.text_input(label='',placeholder="Add New Todo From Here",
+              on_change=add_todo, key= 'new_todo')
+
 
 for index,todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
@@ -21,5 +24,4 @@ for index,todo in enumerate(todos):
         st.experimental_rerun()
 
 
-st.text_input(label='',placeholder="Add New Todo From Here",
-              on_change=add_todo, key= 'new_todo')
+
