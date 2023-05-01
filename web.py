@@ -3,7 +3,7 @@ import Function
 
 def add_todo():
 
-    todo = '\n' + st.session_state["new_todo"]
+    todo = st.session_state["new_todo"] + '\n'
     todos.append(todo)
     Function.write_todos(todos)
 
